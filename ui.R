@@ -34,13 +34,13 @@ shinyUI(fluidPage(
                 ),
                 
                 mainPanel(
-                  h3('Results'),
+                  h3('Output'),
                   
                   h4('You entered'),
                   verbatimTextOutput("inputParameters"), 
                   
                   br(),
-                  h4('Which resulted in a prediction of '),
+                  h4('Test results'),
                   verbatimTextOutput("testresult")
                   
 #                   ,h4('Debug '),
