@@ -1,7 +1,7 @@
 T-test shiny app
 ==========
 
-####This is my first Shiny app, developed as a course project in the Coursera class "Developing data products".
+####This is my first Shiny app, developed as a course project in the Coursera class "Developing data products". This is my second try at this and hopefully I will get it rigth now.
 
 #####The app will conduct a paired or unpaired two-sample t-test.
 
