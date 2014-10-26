@@ -42,11 +42,7 @@ formatTest <- function(res,pv){
     estStr <- paste0("estimated difference in means: ", round(est[1],2),"\n")
   else
     estStr <- paste0("estimated mean of group 1: ", round(est[1],2),"\n","estimated mean of group 2: ",round(est[2],2),"\n")
-  
-#   nullval <- res$null.value
-#   names(nullval)<-NULL
-#   nullvalStr <- paste0("null value: ",round(nullval,2),"\n")
-  
+    
   return(paste0(dgStr,tStr,pStr,confStr,estStr))
 }
 
@@ -70,8 +66,6 @@ runTtest <- function(val1,val2,hyp,pairedVal,var,conf){
   res <- t.test(x,y, alternative = c(hyp),paired = pv, var.equal = as.logical(var), conf.level=conf/100) 
   return(formatTest(res,pv))
 }
-
-
   
 shinyServer(
   function(input, output) {
@@ -91,18 +85,6 @@ shinyServer(
       input$goButton
       isolate(runTtest(input$values1,input$values2,input$hypothesis,input$paired,input$variance,input$confInterval))
     })
-    
-#     output$debug <- renderText({
-#       if (input$goButton == 0)
-#         return("ej tryckt")
-#       input$goButton
-#       isolate(c(input$values1))
-#       
-#     })
-    
-    
+
   }
 )
-
-# $out <- renderPrint : render as R output
-# runApp(display.mode = 'showcase')

@@ -42,15 +42,11 @@ shinyUI(fluidPage(
                   br(),
                   h4('Test results'),
                   verbatimTextOutput("testresult")
-                  
-#                   ,h4('Debug '),
-#                   textOutput("debug")
                 )
                 
                 
             
     )
 ))
-
 
 # p(em("Github repository documentation:",a("Github repo",href="https://github.com/jnsoft/FirstShiny"))),
